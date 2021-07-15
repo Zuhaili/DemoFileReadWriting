@@ -19,7 +19,6 @@ import java.io.FileWriter;
 
 public class MainActivity extends AppCompatActivity {
 
-    String folderLocation;
     Button btnRead, btnWrite;
     TextView textView;
 
@@ -54,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Code for file writing
+                //Internal
                 String folderLocation_I = getFilesDir().getAbsolutePath() + "/Folder";
                 File folder_I = new File(folderLocation_I);
                 if (folder_I.exists() == false) {
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
 
-//                    Log.d("folderlocation",folderLocation);
+
                 try {
 //                        String folderLocation_I= getFilesDir().getAbsolutePath() + "/Folder";
                     File targetFile_I = new File(folderLocation, "data.txt");
